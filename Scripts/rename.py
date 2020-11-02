@@ -5,10 +5,10 @@ import os
 def main():
    i = 0
    #Here you input the path to the files
-   path="C:/Users/vhole/Pictures/vikingemuseet/" 
+   path="Where are your files" 
    for filename in os.listdir(path):
       #Here you give the output a name. Be carefull with the ending.  
-      my_dest ="Vikingemuseum" + str(i) + ".jpg" 
+      my_dest ="Name" + str(i) + "Ending" 
       my_source =path + filename
       my_dest =path + my_dest
       # rename() function will

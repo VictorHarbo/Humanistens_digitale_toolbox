@@ -6,8 +6,8 @@
 
 import shutil, os #imports modules that are used in the script
 
-source ="C:/Users/vhole/iCloudDrive/BA_Historie/" #Path to where the files are located
-newdir = "C:/Users/vhole/iCloudDrive/BA_Historie/Samlede_tekster/" #Path to where the files should be copied
+source ="C:/Users/user/folder/folder/" #Path to where the files are located
+newdir = "C:/Users/user/folder/folder/new_folder/" #Path to where the files should be copied
 
 #This chunk of code makes the new directory where the files are to be transfered, if it already exists it does nothing
 try:
