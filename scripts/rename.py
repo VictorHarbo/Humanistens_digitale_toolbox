@@ -1,21 +1,8 @@
-#!/usr/bin/env python
-import os
+#Script that renames a lot of files with the same ending and keeps the order of the files.
 
-# Function to rename multiple files with the same filetype at once
-def main():
-   i = 0
-   #Here you input the path to the files
-   path="Where are your files" 
-   for filename in os.listdir(path):
-      #Here you give the output a name. Be carefull with the ending.  
-      my_dest ="Name" + str(i) + "Ending" 
-      my_source =path + filename
-      my_dest =path + my_dest
-      # rename() function will
-      # rename all the files
-      os.rename(my_source, my_dest)
-      i += 1
-# Driver Code
-if __name__ == '__main__':
-   # Calling main() function
-   main()
+import os
+path = 'path to files' #Here you insert the path to the files. Remember to end with a /
+files = os.listdir(path)
+for file in files:
+   #Here you tell the computer what to rename the files. Add name in name_of_files and ending in .ending REMEMBER to keep the dot.
+   os.rename(os.path.join(path, file), os.path.join(path, 'name_of_files' + file + '.endning')) 
