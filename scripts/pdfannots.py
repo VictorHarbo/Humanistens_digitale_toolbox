@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-##Everything in this script is made by Andrew Baumann. and can be found in his GitHub repo at: https://github.com/0xabu/pdfannots
+##Everything in this script is made by Andrew Baumann. I (Victor Harbo) is just using this script in my Digital methods course
+##This file does not need to be opened in R. It is the python script invoked in the file pdfannots_inR.R"
+
 """
 Extracts annotations from a PDF file in markdown format for use in reviewing.
 """
@@ -36,7 +38,7 @@ SUBSTITUTIONS = {
 ANNOT_SUBTYPES = frozenset({'Text', 'Highlight', 'Squiggly', 'StrikeOut', 'Underline'})
 ANNOT_NITS = frozenset({'Squiggly', 'StrikeOut', 'Underline'})
 
-COLUMNS_PER_PAGE = 2 # default only, changed via a command-line parameter
+COLUMNS_PER_PAGE = 1 # default only, changed via a command-line parameter
 
 DEBUG_BOXHIT = False
 
@@ -276,8 +278,8 @@ class PrettyPrinter:
         self.outlines = outlines
         self.wrapcol = wrapcol
 
-        self.BULLET_INDENT1 = " * "
-        self.BULLET_INDENT2 = "   "
+        self.BULLET_INDENT1 = " "
+        self.BULLET_INDENT2 = " "
         self.QUOTE_INDENT = self.BULLET_INDENT2 + "> "
 
         if wrapcol:
@@ -543,8 +545,8 @@ def parse_args():
                    help="emit progress information")
     g.add_argument("-o", metavar="OUTFILE", type=argparse.FileType("w"), dest="output",
                    default=sys.stdout, help="output file (default is stdout)")
-    g.add_argument("-n", "--cols", default=2, type=int, metavar="COLS", dest="cols",
-                   help="number of columns per page in the document (default: 2)")
+    g.add_argument("-n", "--cols", default=1, type=int, metavar="COLS", dest="cols",
+                   help="number of columns per page in the document (default: 1)")
 
     g = p.add_argument_group('Options controlling output format')
     allsects = ["highlights", "comments", "nits"]
