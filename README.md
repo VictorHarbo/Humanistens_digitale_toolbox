@@ -5,7 +5,7 @@ Velkommen til, denne side indeholder alt det materiale vi skal bruge til worksho
 Workshoppen udbydes af AU Library Nobelparkens LibLab 
 
 
-## English - The digital toolbox for for a humanities student.
+## English - The digital toolbox for a humanities student.
 Welcome, this page contains all the material vi are to use during the workshop "Humanistens digitale værktøjskasse" It can all be downloaded by pressing the green button at the top of the page.
 
 The workshop is delivered by Liblab at AU Library Nobelparken.
