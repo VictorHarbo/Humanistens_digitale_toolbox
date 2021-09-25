@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 #Selective copy
-
-#Walking through a folder tree and searching for files with a certain file extension('.jpg','.pdf')
-#and copying from whatever location they are present at to a new folder
-
+#  Walking through a folder tree and searching for files
+#  with a certain file extension('.jpg','.pdf')
+#  and copying from whatever location they are present at to a new folder
 import shutil, os #imports modules that are used in the script
 
 source ="C:/Users/user/folder/folder/" #Path to where the files are located
