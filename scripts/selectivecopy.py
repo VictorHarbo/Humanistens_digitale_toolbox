@@ -3,7 +3,16 @@
 #  Walking through a folder tree and searching for files
 #  with a certain file extension('.jpg','.pdf')
 #  and copying from whatever location they are present at to a new folder
-import shutil, os #imports modules that are used in the script
+import shutil
+import os
+import argparse
+
+# Makes the program take commandline inputs
+parser = argparse.ArgumentParser(description= "")
+parser.add_argument("INPUT", help="")
+parser.add_argument("OUTPUT", help="")
+parser.add_argument("-b", "--batch", action="store_true", help="")
+args = parser.parse_args()
 
 source ="C:/Users/user/folder/folder/" #Path to where the files are located
 newdir = "C:/Users/user/folder/folder/new_folder/" #Path to where the files should be copied
