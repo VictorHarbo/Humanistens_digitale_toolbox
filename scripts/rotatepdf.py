@@ -21,6 +21,8 @@ parser.add_argument("-b", "--batch", action="store_true", help='''Use this argum
                     ''')
 args = parser.parse_args()
 
+### TODO: Make the program check if INPUT and OUTPUT is the same. If yes, then quit program
+
 # Makes the user choose how the files should be turned from the VALUE argument
 value = args.VALUE
 # Check if VALUE input is valid
