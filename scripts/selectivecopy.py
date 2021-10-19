@@ -18,6 +18,9 @@ args = parser.parse_args()
 source = args.INPUT
 newdir = args.OUTPUT
 
+### TODO: Make the input argument take only uppercase letters.
+### TODO: Make the script parse the input as lowercase and uppercase filenames
+
 #This chunk of code makes the new directory where the files are to be transfered, if it already exists it does nothing
 try:
     os.makedirs(newdir)
