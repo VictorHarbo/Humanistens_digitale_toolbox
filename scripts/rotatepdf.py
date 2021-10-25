@@ -21,7 +21,12 @@ parser.add_argument("-b", "--batch", action="store_true", help='''Use this argum
                     ''')
 args = parser.parse_args()
 
-### TODO: Make the program check if INPUT and OUTPUT is the same. If yes, then quit program
+# The program checks wether INPUT and OUTPUT arguments are the same path/file.
+# If they are the same, the program stops running. This is because as the program is made
+# it will overwrite the input file with an empty file and destroy the content.
+if args.INPUT == args.OUTPUT:
+    print("\n ERROR: You have specified INPUT and OUTPUT as the same file/folder. \n This does not work! You have to use two different locations.")
+    quit()
 
 # Makes the user choose how the files should be turned from the VALUE argument
 value = args.VALUE

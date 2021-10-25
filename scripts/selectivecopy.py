@@ -31,7 +31,7 @@ except:
 # I am doing this to check that all specified files have been copied in the end
 pdfcount = 0
 
-if filetype  == filetype.upper():
+if filetype == filetype.upper():
     # At first, the script crawls trough all files in a directory 
     # and all of that directorys underlying subdirectories
     for folders, subfolders, filenames in os.walk(INPUT):
