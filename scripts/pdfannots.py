@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-##Everything in this script is made by Andrew Baumann. I (Victor Harbo) is just using this script in my Digital methods course
-##This file does not need to be opened in R. It is the python script invoked in the file pdfannots_inR.R"
-
 """
 Extracts annotations from a PDF file in markdown format for use in reviewing.
 """
