@@ -54,7 +54,7 @@ else:
 
 # As a security feature, we want the program to tell us exactly how many files
 # with the specified FILETYPE it has found in the INPUT directory. Furthermore 
-# it counts how many files with the specified FILETYPE there is in the OUTPUT directory.
+# it counts how many files with the specified FILETYPE there is in the OUTPUT directory.se
 endcount = 0
 for folders, subfolders, filenames in os.walk(OUTPUT):
     for filename in filenames:
