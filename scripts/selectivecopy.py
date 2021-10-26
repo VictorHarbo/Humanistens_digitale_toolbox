@@ -52,13 +52,14 @@ else:
     print("ERROR: Your FILETYPE-INPUT needs to bo be capitalized! Please try again.")
     exit()
 
-# This chunk of code counts all the files in OUTPUT with the FILETYPE ending.
+# As a security feature, we want the program to tell us exactly how many files
+# with the specified FILETYPE it has found in the INPUT directory. Furthermore 
+# it counts how many files with the specified FILETYPE there is in the OUTPUT directory.
 endcount = 0
 for folders, subfolders, filenames in os.walk(OUTPUT):
     for filename in filenames:
         if filename.endswith('.'+ args.FILETYPE) or filename.endswith('.'+ args.FILETYPE.lower()):
             endcount += 1
-#At last i want the  script to tell me how many pdf files it found in the directory, that was our INPUT.
-# And then I want i to tell how many pdf files there is in the newly created directory 
+
 print(f"Found {pdfcount} " + args.FILETYPE + " files in the INPUT directory.")
 print(f"Found {endcount} " + args.FILETYPE + " files in the OUTPUT directory.")
