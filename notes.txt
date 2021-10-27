@@ -29,7 +29,8 @@ For det første skal det omformuleres til at handle om CLI og ikke om scripts. D
 Se punktet oprydning, hvor materialet er beskrevet
 
 ### Python direkte i terminal
-
+Dette kræver måske en mere individuel tilgang på hver computer, så måske vi skal holde os væk fra det. Det ville bare være så sejt
+ 
 ### pip moduler
 
  
