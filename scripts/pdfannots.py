@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+## Script was once located at: https://github.com/0xabu/pdfannots but the format changed.
+
 """
-Extracts annotations from a PDF file in markdown format for use in reviewing.
+Extracts annotations from a PDF file in markdown format. These annotations could be used for reviewing files or simply extracting quotes and notes from texts. 
 """
 
 import sys, io, textwrap, argparse
@@ -532,30 +534,35 @@ def process_file(fh, emit_progress):
 
 
 def parse_args():
-    p = argparse.ArgumentParser(description=__doc__)
+    p = argparse.ArgumentParser(description=__doc__,
+    epilog= '''Originally this script was to be found at this link: https://github.com/0xabu/pdfannots 
+    but the original program has been changed into another form. This version, used for the Digital Toolbox for Humanities workshop, 
+    has some extra helping comments. My hope is that you are able to figure out most of these arguments from the this help-menu.
+    Happy Coding!
+    ''')
 
-    p.add_argument("input", metavar="INFILE", type=argparse.FileType("rb"),
-                   help="PDF file to process")
+    p.add_argument("input", metavar="INPUT", type=argparse.FileType("rb"),
+                   help="PDF file to process. Please provide the path to the file.")
 
     g = p.add_argument_group('Basic options')
     g.add_argument("-p", "--progress", default=False, action="store_true",
-                   help="emit progress information")
+                   help="Emit progress information. This can be helpfull if you are encounting an error or simply just want to know more about whats happening inside of your computer when running the program.")
     g.add_argument("-o", metavar="OUTFILE", type=argparse.FileType("w"), dest="output",
-                   default=sys.stdout, help="output file (default is stdout)")
+                   default=sys.stdout, help="Output file (default is stdout). Remember to add a file ending to the output file. Output is saved nicely as .txt or .md (MARKDOWN) files.")
     g.add_argument("-n", "--cols", default=1, type=int, metavar="COLS", dest="cols",
-                   help="number of columns per page in the document (default: 1)")
+                   help="Number of columns per page in the document (default: 1). It can be usefull to provide the number of columns to have the output formatted the right way.")
 
-    g = p.add_argument_group('Options controlling output format')
+    g = p.add_argument_group('Options that controls output format')
     allsects = ["highlights", "comments", "nits"]
     g.add_argument("-s", "--sections", metavar="SEC", nargs="*",
                    choices=allsects, default=allsects,
-                   help=("sections to emit (default: %s)" % ', '.join(allsects)))
+                   help=("Sections to extract from the file and emit as output (default: %s). This argument can be used to extract one specific section only." % ', '.join(allsects)))
     g.add_argument("--no-group", dest="group", default=True, action="store_false",
-                   help="emit annotations in order, don't group into sections")
+                   help="Emit annotations in order, don't group into sections.")
     g.add_argument("--print-filename", dest="printfilename", default=False, action="store_true",
-                   help="print the filename when it has annotations")
+                   help="Print the filename when it has annotations.")
     g.add_argument("-w", "--wrap", metavar="COLS", type=int,
-                   help="wrap text at this many output columns")
+                   help="Wrap text at this many output columns. Produces output in COLS number of columns. If COLS = 2, then only two signs are printed on each line.")
 
     return p.parse_args()
 
