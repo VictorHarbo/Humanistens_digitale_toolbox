@@ -2,7 +2,7 @@
 
 ==============================================================
 
-* Ryd op i materialet 
+* Ryd op i materialet - DONE 
 * Få styr på strukturen i mapperne
 * Opdatere workshoppens cheatsheet
 * Finde ud af hvilket materiale der er behov for, for at kunne bruge alle tre programmer.

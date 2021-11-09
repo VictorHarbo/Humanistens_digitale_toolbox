@@ -94,6 +94,7 @@ Eksemplet ovenfor tager alle filer der har endelsen JPG i mappen Pictures og kop
 
 ## Det andet program i workshoppen - rotatepdf.py
 Workshoppens næste element er programmet rotatepdf.py, dette program kan som navnet antyder rotere PDF-filer. Ligesom programmet selectivecopy.py skal dette program også bruges igennem vores Command Line Interface. Forestil dig, at du enten har scannet nogle sider fra en bog eller har downloadet tekster fra Brightspace, som vender forkert. Istedet for at skulle vende alle sider om individuelt mens der læses, kan programmet vende hele filer på en gang. Det er også muligt at vende flere hele PDF-filer på en gang. For at bruge programmet gøres følgende i vores CLI:
+
 1. Igennem Command Line navigeres der til programmets placering 
 1. Skab et overblik over programmets funktion:
 > python rotatepdf.py -h
