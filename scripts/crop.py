@@ -19,7 +19,6 @@ args = parser.parse_args()
 INPUT = args.INPUT
 OUTPUT = args.OUTPUT
 
-# TODO: Add print statement, that tells that the crop has been done succesfully 
 # TODO: User-input, that applies to grouped coordinates
 # or 
 # TODO: Make it possible to move middle by percentage or +/- 10 pixels
@@ -96,8 +95,6 @@ if args.manual:
         with open(OUTPUT, "wb") as out_f:
             output.write(out_f)
         
-    print("Your PDF file has been cropped. You can find it at this location: " + OUTPUT)
-
 # Crops page at the middle coordinate
 else:
     with open(INPUT, "rb") as in_f:
@@ -116,8 +113,6 @@ else:
 
             # Save the coordinates of the PDF corners
             L_LowerLeft = L_page.cropBox.getLowerLeft()
-            L_LowerRight = L_page.cropBox.getLowerRight()
-            L_UpperLeft = L_page.cropBox.getUpperLeft()
             L_UpperRight = L_page.cropBox.getUpperRight()
 
             # Breaks coordinates into integers
@@ -143,8 +138,6 @@ else:
 
             # Save the coordinates of the PDF corners
             R_LowerLeft = R_page.cropBox.getLowerLeft()
-            R_LowerRight = R_page.cropBox.getLowerRight()
-            R_UpperLeft = R_page.cropBox.getUpperLeft()
             R_UpperRight = R_page.cropBox.getUpperRight()
 
             # Breaks coordinates into integers
@@ -164,6 +157,6 @@ else:
 
         with open(OUTPUT, "wb") as out_f:
             output.write(out_f)
-    
-    print("Your PDF has been cropped in the middle. You can find it at this location: " + OUTPUT)
+                
+print("Your PDF has been cropped in the middle. You can find it at this location: " + OUTPUT)
 
