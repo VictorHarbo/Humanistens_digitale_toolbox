@@ -1,21 +1,13 @@
-# Opgaver der skal løses angående HDV
+ Opgaver der skal løses angående HDV
 
 ==============================================================
-
-* Ryd op i materialet - DONE 
+ 
 * Få styr på strukturen i mapperne
 * Opdatere workshoppens cheatsheet
 * Finde ud af hvilket materiale der er behov for, for at kunne bruge alle tre programmer.
 * Tjek op på hvordan man kører python script uanset hvor man er i terminalen. Handler det om shebangs?
 * Spørge Max om det ville give mening at forsøge at udgive programmerne som pip pakker.
 ** Jeg ville gøre det for at man kan bruge dem direkte i terminalen uden at skulle navigere hen til dem og uden at skrive python før man kalder på scriptet
-
-==============================================================
-
-### Oprydning 
-Jeg har slettet materialet der hørte til det gamle rename script. 
-Til rotatepdf.py skal jeg have flere pdf-filer med indhold, der alle skal vendes. 
-Til selectivecopy.py har jeg pdf placeholders, der illustrere hvad scriptet kan. Jeg vil gerne have .jpg og .txt filer i disse mapper også, får at vise, at den rent faktisk kun tager de filer, der har den bestemte endelse, som vi har bedt om.
 
 =============================================================
 
