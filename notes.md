@@ -5,7 +5,6 @@
 * Få styr på strukturen i mapperne
 * Opdatere workshoppens cheatsheet
 * Finde ud af hvilket materiale der er behov for, for at kunne bruge alle tre programmer.
-* Tjek op på hvordan man kører python script uanset hvor man er i terminalen. Handler det om shebangs?
 * Spørge Max om det ville give mening at forsøge at udgive programmerne som pip pakker.
 ** Jeg ville gøre det for at man kan bruge dem direkte i terminalen uden at skulle navigere hen til dem og uden at skrive python før man kalder på scriptet
 
@@ -18,12 +17,9 @@ Jeg er i tvivl om, hvordan jeg skal skabe strukturen i workshoppen. Skal mappern
 
 ### Cheatsheet
 Cheatsheetet skal laves fuldstændigt om, det beskriver ikke workshoppen i dens nye format. 
-For det første skal det omformuleres til at handle om CLI og ikke om scripts. Derudover skal rename.py scriptet skrives ud, da det ikke er en del af workshoppen mere.
-
-=============================================================
-
-### Materiale 
-Se punktet oprydning, hvor materialet er beskrevet. 
+For det første skal det omformuleres til at handle om CLI og ikke om scripts. Derudover skal rename.py scriptet skrives ud, da det ikke er en del af workshoppen mere. 
+Derefter skal crop.py skrives ind. 
+Jeg tænker også at der skal være en konkret vejledning til, hvordan man arbejder i terminalen.
 
 =============================================================
 
@@ -37,5 +33,5 @@ Spørg Max om han tror, at dette ville gøre installeringen nemmere eller, om de
 
 =============================================================
 
-### pdfannots.py
-Jeg har lyst til at skrive noget ekstra hjælp i pdfannots.py, som gør programmets -h flag mere brugbart. Det kunne måske også være fedt at gøre det lidt mere basic forståeligt. Programmet er open-source, så der ville ikke være nogle problemer med at ændre i det.  
+### Tjek help-flags igennem
+Det ville være rigtigt godt at få skrevet en masse hjælp i programmernes help-flags. Så brugerne lærer at man altid kan søge hjælp i selve programmet.  
