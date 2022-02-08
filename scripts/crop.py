@@ -5,7 +5,9 @@ from PyPDF2 import PdfFileWriter,PdfFileReader,PdfFileMerger
 # TODO: Update descriptions and argument help to match this program
 
 # Makes the program take commandline inputs
-parser = argparse.ArgumentParser(description= '''A program, that crops pdf-files. The standard output is cropped on the middle. It can crop at a selected value with the -m flag.''')
+parser = argparse.ArgumentParser(description= '''A program, that crops pdf-files. The standard output is cropped on the middle. It can crop at a manual value with the -m flag. 
+                                                The intended use for this program is to be used, when you have a double-paged scan, which you would like to crop.
+                                                If the pdf-file contains elements like OCR or user generated text, it might obscure the quality of the output.''')
 parser.add_argument("INPUT", help="The path to your input pdf file.")
 parser.add_argument("OUTPUT", help="The path to your output pdf file. It is always a good idea to make the output something else than the input.")
 parser.add_argument("-m", "--manual", action="store_true", help='''Use this argument to change the crop value,
@@ -24,6 +26,7 @@ OUTPUT = args.OUTPUT
 # TODO: Make it possible to move middle by percentage or +/- 10 pixels
  
 # Manually assigning where to crop the page in CLI
+MANUAL_COORD = 0
 if args.manual:
     with open(INPUT, "rb") as in_f:
         input1 = PdfFileReader(in_f)
@@ -31,6 +34,12 @@ if args.manual:
         output = PdfFileWriter()
 
         numPages = input1.getNumPages()
+
+        #Takes the user-input coordinate:
+        print("The middle of the INPUT file is located at this coordinate: 210")
+        print("At what coordinate do you want to crop the pages? \n(A lower coordinate crops the pages further to the left and a heigher coordinate crops further to the right). ")
+        manual_coord = input("Your coordinate: ")
+        print("Cropping your file, please wait...")
 
         for i in range(numPages):
             ### Create left page ###
@@ -52,11 +61,6 @@ if args.manual:
             L_Top_Y_coord = L_UpperRight[1]
             L_Bot_Y_coord = L_LowerLeft[1] 
             L_middle_X_coord = L_Top_X_coord / 2
-
-            # Takes the user-input coordinate:
-            print("The middle of the INPUT file is located at this coordinate: ", L_middle_X_coord)
-            print("At what coordinate do you want to crop the pages? \n(A lower coordinate crops the pages further to the left and a heigher coordinate crops further to the right) ")
-            manual_coord = input("Your coordinate: ")
         
             # Adds left page to output:
             L_page.trimBox.lowerLeft = (0, 0)
@@ -103,6 +107,8 @@ else:
         output = PdfFileWriter()
 
         numPages = input1.getNumPages()
+
+        print("Cropping your PDF-file. Please wait...")
 
         for i in range(numPages):
             # Create left page
@@ -158,5 +164,5 @@ else:
         with open(OUTPUT, "wb") as out_f:
             output.write(out_f)
                 
-print("Your PDF has been cropped in the middle. You can find it at this location: " + OUTPUT)
+print("Your PDF has been cropped. You can find it at this location: \n" + OUTPUT)
 
