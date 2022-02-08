@@ -25,8 +25,8 @@ Det ville være rigtigt godt at få skrevet en masse hjælp i programmernes help
 
 =============================================================
 
-### test materiale til workshoppen
-1. Selectivecopy.py
-1. Rotate.py
-1. crop.py
-1. pdfannots.py 
+### test materiale til workshoppens scripts
+1. Selectivecopy.py - mappen med fake-pdf'er.
+1. Rotate.py - en indscannet pdf der vender forkert.
+1. crop.py - en dobbeltsidet pdf.
+1. pdfannots.py - en pdf med annoteringer.
