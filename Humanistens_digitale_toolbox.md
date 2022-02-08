@@ -9,13 +9,13 @@ Miniconda er det program, som vi skal bruge til at køre vores kode i. Det best�
 Miniconda hentes her: https://docs.conda.io/en/latest/miniconda.html 
 
 ## Hvordan åbner jeg miniconda?
-Miniconda (fremover conda) åbnes forskelligt alt efter om du bruger Windows eller Mac. Fælles for systemerne er, at conda og det bagvedliggende kodesprog python bruges igennnem et Command Line Interface (CLI). Vi skal i workshoppen arbejde med vores computer på en måde, der er fundamentalt anderledes end hvad vi normalt er vandt til at gøre. Vi kommer til at ligge det grafiske interface (vores skrivebord og billeder af mapper) på hylden og interagere med computeren igennem tekst og commands. En af de helt store forskelle fra vores "hverdagsbrug" af computeren og til denne Command Line brug er, at vores mus/trackpad ikke spiller en særligt stor rolle. Det er ikke muligt, at klikke på noget med musen. Istedet skal vi fortælle computeren, hvad vi vil have den til med tekst kommandoer.r
+Miniconda (fremover conda) åbnes forskelligt alt efter om du bruger Windows eller Mac. Fælles for systemerne er, at conda og det bagvedliggende kodesprog python bruges igennnem et Command Line Interface (CLI). Vi skal i workshoppen arbejde med vores computer på en måde, der er fundamentalt anderledes end hvad vi normalt er vandt til at gøre. Vi kommer til at ligge det grafiske interface (vores skrivebord og billeder af mapper) på hylden og interagere med computeren igennem tekst og commands. En af de helt store forskelle fra vores "hverdagsbrug" af computeren og til denne Command Line brug er, at vores mus/trackpad ikke spiller en særligt stor rolle. Det er ikke muligt, at klikke på noget med musen. Istedet skal vi fortælle computeren, hvad vi vil have den til med tekst kommandoer
 
 ### Windows
-På Windows skal vi åbne programmet Anaconda powershell promt (miniconda), som ADMINISTRATOR. Dette Command Line Interface (CLI) skal vi arbejde i under workshoppen. Det er som sagt en anden måde at arbejde med sin computer på, som kan kræve lidt tilvænning og oplæring, nu hvor de fleste af os er vokset op med et grafisk skrivebord på computeren.
+På Windows skal vi åbne programmet Anaconda powershell promt (miniconda), som ADMINISTRATOR. Dette Command Line Interface (CLI) skal vi arbejde i under workshoppen. Det er som sagt en anden måde at arbejde med sin computer på, som kræver lidt tilvænning og oplæring, nu hvor de fleste af os er vokset op med et grafisk skrivebord på computeren.
 
 ### Mac
-På Mac, skal man  åbne programmet ”terminal” efter installationen af miniconda. Dette kan gøres ved at bruge genvejen cmd + mellemrum og så søge "terminal". Hvis man ikke vil bruge cmd + mellemrum genvejen kan programmet normalt findes og åbnes i mappen Hjælpeprogrammer under programmer. Terminalen er Mac computeres Command Line Interface (CLI) som vi skal arbejde i under workshoppen. Det er som sagt også en anden måde at arbejde med sin computer på, som kan kræve lidt tilvænning og oplæring
+På Mac, skal man  åbne programmet ”terminal” efter installationen af miniconda. Dette kan gøres ved at bruge genvejen cmd + mellemrum og så søge "terminal". Hvis man ikke vil bruge cmd + mellemrum genvejen kan programmet normalt findes og åbnes i mappen Hjælpeprogrammer under programmer. Terminalen er Mac computeres Command Line Interface (CLI) som vi skal arbejde i under workshoppen. Det er som sagt en anden måde at arbejde med sin computer på, som kan kræve lidt tilvænning og oplæring
 
 ## Opsætning af conda
 Første gang man bruger conda, skal man lave det miljø, som man vil arbejde i. Det er her man sikre sig, at forskellige python projekter ikke "ødelægger" hinanden. Man kan se på disse virtuelle miljøer som et bur man har sit kæledyr i. Hvis vi skal blive i python sprogets dyreunivers kan man sige at hvert conda miljø man laver sikrer, at ens forskellige kode ikke spiser og ædelægger hinanden, som to forskellige rovdyr, der skal leve sammen i det samme bur. 
@@ -125,8 +125,11 @@ Et eksempel på denne brug kunne være følgende:
 
 I det ovenfor nævnte eksempel roteres alle pdf-filer i mappen "_filer_til_rotering_" 90 grader med uret og gemmes i mappen "_roterede_filer_".
 
-## Det trejde program i workshoppen - pdfannots.py
-Workshoppens tredje program hedder pdfannots.py. Scriptet er oprindeligt udviklet til at reviderer akademiske artikler og konferencebidrag. Det kan dog også hjælpe os andre, som læser, overstreger og skriver kommentarer i PDF-filer. Scriptets kernefunktion er, at trække kommentarer og overstregninger ud af PDF-filer. Lad os kigge på det:
+## Det tredje program i workshoppen - crop.py
+Workshoppens tredje program hedder crop.py 
+
+## Det fjerde program i workshoppen - pdfannots.py
+Workshoppens fjerde program hedder pdfannots.py. Programmet er oprindeligt udviklet til at reviderer akademiske artikler og konferencebidrag. Det kan dog også hjælpe os andre, som læser, overstreger og skriver kommentarer i PDF-filer. Scriptets kernefunktion er, at trække kommentarer og overstregninger ud af PDF-filer. Lad os kigge på det:
 
 Når vi skal bruge scriptet, skal vi gøre følgende i vores CLI:
 1. Først naviger hen til scriptet i terminalen
