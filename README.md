@@ -1,4 +1,4 @@
-# Humanistens_digitale_toolbox
+# Humanistens Digitale Toolbox
 ## Dansk - Humanistes digitale værktøjskasse. 
 Velkommen til, denne side indeholder alt det materiale vi skal bruge til workshoppen "Humanistens digitale værktøjskasse" Det hele kan downloades ved at trykke på den grønne knap øverst til højre.
 
