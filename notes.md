@@ -22,3 +22,11 @@ Jeg tænker også at der skal være en konkret vejledning til, hvordan man arbej
 
 ### Tjek help-flags igennem
 Det ville være rigtigt godt at få skrevet en masse hjælp i programmernes help-flags. Så brugerne lærer at man altid kan søge hjælp i selve programmet.  
+
+=============================================================
+
+### test materiale til workshoppen
+1. Selectivecopy.py
+1. Rotate.py
+1. crop.py
+1. pdfannots.py 
