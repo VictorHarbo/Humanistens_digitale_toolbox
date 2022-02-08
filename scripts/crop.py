@@ -26,7 +26,6 @@ OUTPUT = args.OUTPUT
 # TODO: Make it possible to move middle by percentage or +/- 10 pixels
  
 # Manually assigning where to crop the page in CLI
-MANUAL_COORD = 0
 if args.manual:
     with open(INPUT, "rb") as in_f:
         input1 = PdfFileReader(in_f)
