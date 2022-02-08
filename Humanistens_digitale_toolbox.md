@@ -69,7 +69,7 @@ Fra vores command line kan vi køre programmer, der ikke har grafiske interfaces
 Nogle python programmer har brug for at man også giver dem argumenter igennem command line. Det kan fx være inputs og outputs. Fx kan et progam skulle bruges på følgende måde, hvilket vi skal bruge når vi skal arbejde med workshoppens programmer:
 > python program.py INPUT OUTPUT
 
-Et tredje element, som kommer i brug igennem workshoppen er brug af -flags. -flags kan bruges til mange ting, fx kan de bruges til at få mere at vide om programmet og ændre ved nogle indstillinger. De fleste programmer der kører over command line har et -h/--help flag, som vises sådan:
+Et tredje element, som kommer i brug igennem workshoppen er brug af _flags_. Flags kan bruges til mange ting, fx kan de bruges til at få mere at vide om programmet og ændre ved nogle indstillinger. De fleste programmer der kører over command line har et -h/--help flag, som vises sådan. Det er altid en god ide at starte med at få vist et programs hjælpeflag inden man begynder at bruge programmet.:
 > python program.py -h
 
 Hvis det ikke er et help-flag, kan det muligvis bruges sammen med INPUT og OUTPUT:
@@ -126,13 +126,21 @@ Et eksempel på denne brug kunne være følgende:
 I det ovenfor nævnte eksempel roteres alle pdf-filer i mappen "_filer_til_rotering_" 90 grader med uret og gemmes i mappen "_roterede_filer_".
 
 ## Det tredje program i workshoppen - crop.py
-Workshoppens tredje program hedder crop.py 
+Workshoppens tredje program hedder crop.py. Dette program kan bruges til at dele dobbelt sidede PDF-filer til at have en sides tekst per side i PDF dokumentet også. Programmet bruges på følgende måde:
+1. I dit command line interface navigerer du hen til programmet.
+1. programmet bruges ved at skrive:
+> python crop.py INPUT OUTPUT
+
+* INPUT er her stien til den pdf-fil, som skal croppes/beskæres. OUTPUT er stien til det sted, hvor den beskårede PDF skal gemmes.
+
+Som standard beskærer den PDF-filen på midten. I nogle tilfælde kan teksten i INPUT filen være forskudt, her kan man bruge programmets manuelle funktion. Denne funktion er gemt under flaget -m. Med dette _flag_ kan man fortælle programmet præcist hvor på siden det skal skære filen. For at bruge -m flaget bruger man programmet på følgende måde og indtaster skæringspunktet efterfølgende:
+> python crop.py -m INPUT OUTPUT
 
 ## Det fjerde program i workshoppen - pdfannots.py
 Workshoppens fjerde program hedder pdfannots.py. Programmet er oprindeligt udviklet til at reviderer akademiske artikler og konferencebidrag. Det kan dog også hjælpe os andre, som læser, overstreger og skriver kommentarer i PDF-filer. Scriptets kernefunktion er, at trække kommentarer og overstregninger ud af PDF-filer. Lad os kigge på det:
 
 Når vi skal bruge scriptet, skal vi gøre følgende i vores CLI:
-1. Først naviger hen til scriptet i terminalen
+1. Først naviger man hen til scriptet i terminalen
 1. Dernæst aktiver scriptet ved at skrive: 
 >python pdfannots.py INFILE
 
