@@ -9,37 +9,13 @@ Miniconda er det program, som vi skal bruge til at køre vores kode i. Det best�
 Miniconda hentes her: https://docs.conda.io/en/latest/miniconda.html 
 
 ## Hvordan åbner jeg miniconda?
-Miniconda (fremover conda) åbnes forskelligt alt efter om du bruger Windows eller Mac. Fælles for systemerne er, at conda og det bagvedliggende kodesprog python bruges igennnem et Command Line Interface (CLI). Vi skal i workshoppen arbejde med vores computer på en måde, der er fundamentalt anderledes end hvad vi normalt er vandt til at gøre. Vi kommer til at ligge det grafiske interface (vores skrivebord og billeder af mapper) på hylden og interagere med computeren igennem tekst og commands. En af de helt store forskelle fra vores "hverdagsbrug" af computeren og til denne Command Line brug er, at vores mus/trackpad ikke spiller en særligt stor rolle. Det er ikke muligt, at klikke på noget med musen. Istedet skal vi fortælle computeren, hvad vi vil have den til med tekst kommandoer
+Miniconda (fremover conda) åbnes forskelligt alt efter om du bruger Windows eller Mac. Fælles for systemerne er, at conda og det bagvedliggende kodesprog python i denne workshop bruges igennnem et Command Line Interface (CLI). Vi skal i workshoppen arbejde med vores computer på en måde, der er fundamentalt anderledes end hvad vi normalt er vandt til at gøre. Vi kommer til at ligge det grafiske interface (vores skrivebord og billeder af mapper) på hylden og interagere med computeren igennem tekst og commands. En af de helt store forskelle fra vores "hverdagsbrug" af computeren og til denne Command Line brug er, at vores mus/trackpad ikke spiller en særligt stor rolle. Det er ikke muligt, at klikke på noget med musen. Istedet skal vi fortælle computeren, hvad vi vil have den til med tekst kommandoer
 
 ### Windows
 På Windows skal vi åbne programmet Anaconda powershell promt (miniconda), som ADMINISTRATOR. Dette Command Line Interface (CLI) skal vi arbejde i under workshoppen. Det er som sagt en anden måde at arbejde med sin computer på, som kræver lidt tilvænning og oplæring, nu hvor de fleste af os er vokset op med et grafisk skrivebord på computeren.
 
 ### Mac
 På Mac, skal man  åbne programmet ”terminal” efter installationen af miniconda. Dette kan gøres ved at bruge genvejen cmd + mellemrum og så søge "terminal". Hvis man ikke vil bruge cmd + mellemrum genvejen kan programmet normalt findes og åbnes i mappen Hjælpeprogrammer under programmer. Terminalen er Mac computeres Command Line Interface (CLI) som vi skal arbejde i under workshoppen. Det er som sagt en anden måde at arbejde med sin computer på, som kan kræve lidt tilvænning og oplæring
-
-## Opsætning af conda
-Første gang man bruger conda, skal man lave det miljø, som man vil arbejde i. Det er her man sikre sig, at forskellige python projekter ikke "ødelægger" hinanden. Man kan se på disse virtuelle miljøer som et bur man har sit kæledyr i. Hvis vi skal blive i python sprogets dyreunivers kan man sige at hvert conda miljø man laver sikrer, at ens forskellige kode ikke spiser og ædelægger hinanden, som to forskellige rovdyr, der skal leve sammen i det samme bur. 
-For at lave et nyt miljø i conda skriver man følgende command: 
-> conda create --name "toolbox" python=3.9
-
-Når dette miljø er lavet, skal man aktivere det. Det gør man ved at skrive:
-> conda activate "toolbox"
-
-For at deaktivere et conda miljø skrives:
-> conda deactivate
-
-Dette er det grundlæggende conda, som vi bruger i løbet af workshoppen. Hvis man efter at have lavet miljøet "Toolbox" lukker vinduet ned, skal man aktivere sit miljø igen.
-Nedenfor er en liste af brugbare conda commands:
-
-| Command | Forklaring |
-|--- |---|
-|conda create - -name "name" python=3.8|Laver et nyt miljø i conda, som kører python 3.8, der hedder name|
-|conda activate "name"|Aktiverer conda miljøet "name"|
-|conda deactivate | Deaktiverer det aktive conda miljø|
-|conda install "package"|Installerer pakken "package" i conda|
-|conda uninstall "package"|Afinstallere pakken "package"|
-|conda update |Opdaterer conda|
-|conda update "package"|Opdaterer pakken "package"|
 
 ## Sådan navigerer man i sit Command Line Interface
 Når man bruger programmerne PowerShell (Windows) & Terminal (Mac) interagerer man som tidligere nævnt med computeren på en helt anden måde. Grunden til at vi skal denne vej ind, er fordi vi denne vej kan få lov til mange andre ting med computeren. Men for at det kan lade sig gøre skal vi vide, hvordan vi bevæger os rundt i systemet, når vi ikke har en mus til at klikke på mapperne. Nedenfor har jeg indsat en tabel, der indeholder nogle af de mest brugbare commands til at finde rundt i Shell og Terminal:
